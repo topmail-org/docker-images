@@ -16,3 +16,5 @@ RUN install-php-extensions \
         xsl \
         intl \
         redis
+
+RUN apk add --no-cache openssh-client git
