@@ -40,8 +40,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: $IMAGE
+          context: ${{ matrix.image }}
           push: true
-          tags: ${{ matrix.image }}
+          tags: ${{ steps.prepare.outputs.IMAGE }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
