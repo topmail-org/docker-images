@@ -32,8 +32,8 @@ jobs:
       - name: Prepare
         id: prepare
         run: |
-          IMAGE=ghcr.io/${{ github.repository }}/$IMAGE
-          VERSION=lastest
+          IMAGE_ID=ghcr.io/${{ github.repository }}/$IMAGE
+          VERSION=latest
 
           echo "IMAGE=$IMAGE_ID:$VERSION" >> $GITHUB_OUTPUT
 
