@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        IMAGE: 
+        image: 
           - php-fpm
 
     steps:
@@ -32,7 +32,7 @@ jobs:
       - name: Prepare
         id: prepare
         run: |
-          IMAGE_ID=ghcr.io/${{ github.repository }}/$IMAGE
+          IMAGE_ID=ghcr.io/${{ github.repository }}/${{ matrix.image }}
           VERSION=latest
 
           echo "IMAGE=$IMAGE_ID:$VERSION" >> $GITHUB_OUTPUT
